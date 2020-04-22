@@ -17,14 +17,15 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class='name'>
-            <h1>
-                <bold> Crystals Collector! </bold>
-                <!--needs a colored box and white text-->
-            </h1>
-        </div>
-        <!--needs a colored box and green text-->
+    <!-- <div class="container"> -->
+    <div class='name'>
+        <h1>
+            <bold> Crystals Collector! </bold>
+            <!--needs a colored box and white text-->
+        </h1>
+    </div>
+    <!--needs a colored box and green text-->
+    <div class="howToPlay">
         <h5>You will be given a random number at the start of the game.</h5>
         <h5>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your
             total score.</h5>
@@ -33,27 +34,46 @@
         <h5>The value of each crystal is hidden from you until you click on it.</h5>
         <h5>Each time the game starts, the game will change the values of each crystal.</h5>
         <h5>If you feel up to the challenge start by clicking a crystal.</h5>
-
-        <div class="goal">
-            <h3>Try to get to this number:
-                <span id="randomNumber"></span>
-            </h3>
-        </div>
-        <!--needs a colored box purple text-->
-
-        <!--Need a wins and losses text with adding and a colored box with black text-->
-
-
-        <!--needs immages for each crystal-->
-        <div class="crystal">
-            <img src="./assets/images/ruby.jpg" id="ruby" data-factoid="red">
-            <img src="./assets/images/diamond.jpg" id="diamond" data-factoid="clear">
-            <img src="assets/images/citrine.jpg" id="citrine" data-factoid="yellow">
-            <img src="./assets/images/emerald.jpg" id="emerald" data-factoid="green">
-        </div>
     </div>
+
+    <div class="goal">
+        <h3>Try to get to this number:
+            <span id="randomNumber"></span>
+        </h3>
+    </div>
+    <!--needs a colored box purple text-->
+
+    <!--Need a wins and losses text with adding and a colored box with black text-->
+    <div class="gamecount">
+        <h4>Wins:
+            <span id="Wins"></span>
+            </br>
+            Losses:
+            <span id="Losses"></span>
+        </h4>
+    </div>
+
+
+    <!--needs immages for each crystal-->
+    <div class="crystal">
+        <img src="./assets/images/ruby.jpg" id="ruby" data-factoid="red">
+        <img src="./assets/images/diamond.jpg" id="diamond" data-factoid="clear">
+        <img src="assets/images/citrine.jpg" id="citrine" data-factoid="yellow">
+        <img src="./assets/images/emerald.jpg" id="emerald" data-factoid="green">
+    </div>
+
+    <!--needs a colored box and white text-->
+    <div class="score">
+        <h3> Your total score is:
+            <span id="totalScore"></span>
+        </h3>
+    </div>
+
+
+    <!-- </div> -->
 </body>
 
+<!-- Added link to the js -->
 <script src="./assets/javascript/game.js"> </script>
 
 </html>
