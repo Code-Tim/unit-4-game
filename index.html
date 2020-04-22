@@ -17,11 +17,39 @@
 </head>
 
 <body>
-    <div id="goal">NaN</div>
-    <div class="crystal" id="uno" data-factoid="the lonliest number">UNO</div>
-    <div class="crystal" id="dos" data-factoid="the number of 'x's in dos equis">DOS</div>
-    <div class="crystal" id="tres">TRES</div>
-    <div class="crystal" id="quatro">QUATRO</div>
+    <div class="container">
+        <div class='name'>
+            <h1>
+                <bold> Crystals Collector! </bold>
+                <!--needs a colored box and white text-->
+            </h1>
+        </div>
+        <!--needs a colored box and green text-->
+        <h5>You will be given a random number at the start of the game.</h5>
+        <h5>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your
+            total score.</h5>
+        <h5>You will win the game by matching your total score to a random number, you will lose the game if your total
+            score goes over the random number.</h5>
+        <h5>The value of each crystal is hidden from you until you click on it.</h5>
+        <h5>Each time the game starts, the game will change the values of each crystal.</h5>
+        <h5>If you feel up to the challenge start by clicking a crystal.</h5>
+
+        <div class="goal">
+            <h3>Try to get to this number:
+                <span id="randomNumber"></span>
+            </h3>
+        </div>
+        <!--needs a colored box purple text-->
+
+        <!--Need a wins and losses text with adding and a colored box with black text-->
+
+
+        <!--needs immages for each crystal-->
+        <div class="crystal" id="ruby" data-factoid="1">UNO</div>
+        <div class="crystal" id="diamond" data-factoid="2">DOS</div>
+        <div class="crystal" id="citrine" data-factoid="3">TRES</div>
+        <div class="crystal" id="emerald" data-factoid="4">QUATRO</div>
+    </div>
 </body>
 
 <script src="./assets/javascript/game.js"> </script>
