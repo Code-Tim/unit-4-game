@@ -7,15 +7,15 @@ var $loses = document.getElementById('loses')
 var wins = 0
 var loses = 0
 
-$('#numberWins').text(wins);
-$('#numberLoses').text(loses);
+$('#Wins').text(wins);
+$('#Loses').text(loses);
 // var randomNumber = []
-var totalScore = 0
+// var totalScore = 0
 var score = 0
 
 
 // Need to select random start number each time the game starts
-var randomNumber = Math.floor(Math.random() * 100)
+var randomNumber = Math.floor(Math.random() * 100 + 19)
 
 // show the random number in the correct spot "goal"
 $('#randomNumber').text(randomNumber);
@@ -26,34 +26,58 @@ var num1 = Math.floor(Math.random() * 11 + 1);
 var num2 = Math.floor(Math.random() * 11 + 1);
 var num3 = Math.floor(Math.random() * 11 + 1);
 var num4 = Math.floor(Math.random() * 11 + 1);
+$('#ruby').data("points", num1)
+$('#diamond').data("points", num2)
+$('#citrine').data("points", num3)
+$('#emerald').data("points", num4)
+function reset() {
+    score = 0
 
+
+    // Need to select random start number each time the game starts
+    randomNumber = Math.floor(Math.random() * 100 + 19)
+
+    // show the random number in the correct spot "goal"
+    $('#randomNumber').text(randomNumber);
+
+
+    // need to set up a random number for each crystal
+    num1 = Math.floor(Math.random() * 11 + 1);
+    num2 = Math.floor(Math.random() * 11 + 1);
+    num3 = Math.floor(Math.random() * 11 + 1);
+    num4 = Math.floor(Math.random() * 11 + 1);
+    $('#ruby').data("points", num1)
+    $('#diamond').data("points", num2)
+    $('#citrine').data("points", num3)
+    $('#emerald').data("points", num4)
+}
 // need to set up a listener for the click
-$('#ruby').on('click', function () {
-    score = score + num1;
-    console.log("total score= " + score);
-    $('#totalScore').text(score);
+// $('#ruby').on('click', function () {
+//     score = score + num1;
+//     console.log("total score= " + score);
+//     $('#totalScore').text(score);
 
-    if (score == randomNumber) {
-        winner();
-    }
-    else if (score > randomNumber) {
-        loser();
-    }
-})
+//     if (score == randomNumber) {
+//         winner();
+//     }
+//     else if (score > randomNumber) {
+//         loser();
+//     }
+// })
 
 // add wins and losses to gamecount
 
 function winner() {
     alert("Winner");
     wins++;
-    $('#numberWins').text(wins);
+    $('#Wins').text(wins);
     reset();
 }
 
 function loser() {
     alert("You a loser!");
     loses++;
-    $('#numberLoses').text(loses);
+    $('#Loses').text(loses);
     reset()
 }
 // need to reset the game win or lose
@@ -68,10 +92,20 @@ function loser() {
 $('.crystal').on('click', function () {
     // console.log(this.innerText)
     console.log($(this).attr("id"))
-    // console.log($(this).attr("data-factoid"))
-    // console.log($(this).data("factoid"))
-})
+    console.log("WHERE IS IT!?")
+    //console.log($(this).attr("data-factoid")) 
+    let points = ($(this).data("points"))
+    score = score + points;
+    console.log("total score= " + score);
+    $('#totalScore').text(score);
 
+    if (score == randomNumber) {
+        winner();
+    }
+    else if (score > randomNumber) {
+        loser();
+    }
+})
 
 // $('.crystal').on('click', sayHi)
 
