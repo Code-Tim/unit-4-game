@@ -44,7 +44,7 @@ body{
 .gamecount{
     width: 10%;
     height: 40px;
-    margin-left: 310px;    
+    margin-left: 20px;    
     background-color: rgb(62, 197, 179);
 }
 .score{
@@ -57,5 +57,9 @@ body{
     background-color: teal;
 }
 .crystal{
+    margin-top: 20px;
     margin-left: 20px;
+    margin-bottom: 20px;
+    /* margin: 20px 0 20px 10px; */
+
 }

@@ -14,14 +14,14 @@ $('#Loses').text(loses);
 var score = 0
 
 
-// Need to select random start number each time the game starts
+// Need to select random start number each time the game starts and the random number shown at the start of the game should be between 19 - 120.
 var randomNumber = Math.floor(Math.random() * 100 + 19)
 
 // show the random number in the correct spot "goal"
 $('#randomNumber').text(randomNumber);
 
 
-// need to set up a random number for each crystal
+// need to set up a crystal should have a random hidden value between 1 - 12.
 var num1 = Math.floor(Math.random() * 11 + 1);
 var num2 = Math.floor(Math.random() * 11 + 1);
 var num3 = Math.floor(Math.random() * 11 + 1);
@@ -32,6 +32,7 @@ $('#citrine').data("points", num3)
 $('#emerald').data("points", num4)
 function reset() {
     score = 0
+    $('#totalScore').text(0);
 
 
     // Need to select random start number each time the game starts
@@ -107,8 +108,3 @@ $('.crystal').on('click', function () {
     }
 })
 
-// $('.crystal').on('click', sayHi)
-
-// function sayHi() {
-//     console.log('hello')
-// }
